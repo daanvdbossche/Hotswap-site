@@ -21,7 +21,7 @@ Already configured as:
 Edit `config.js` later when these links are available:
 
 - `appStoreUrl`
-- [`instagram`](https://www.instagram.com/hotswap.app?stkn=MXI0ZXZmc3gxMXU3dw%3D%3D&utm_source=qr)
+- `instagramUrl`
 
 ## Recommended App Store Connect URLs
 
@@ -50,3 +50,8 @@ You still need to complete these directly in App Store Connect:
 - select the release build
 
 The app itself must also contain an easily accessible link to the Privacy Policy.
+
+
+## Real app screenshots
+
+The homepage now uses real HotSwap screenshots supplied by the user.
