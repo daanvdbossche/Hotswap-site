@@ -21,7 +21,7 @@ Already configured as:
 Edit `config.js` later when these links are available:
 
 - `appStoreUrl`
-- [`instagramUrl`](https://github.com/daanvdbossche/Hotswap-site.git)
+- [`instagram`](https://www.instagram.com/hotswap.app?stkn=MXI0ZXZmc3gxMXU3dw%3D%3D&utm_source=qr)
 
 ## Recommended App Store Connect URLs
 
