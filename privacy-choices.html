@@ -1,49 +1,85 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="HotSwap privacy choices and data deletion requests."><title>HotSwap Privacy Choices</title>
-<link rel="stylesheet" href="styles.css"><script src="config.js"></script><link rel="icon" type="image/png" href="hotswap-logo.png">
-</head><body>
-<div class="navbar"><div class="wrap"><nav>
-<a class="brand" href="index.html"><span class="mark"><img src="hotswap-logo.png" alt="HotSwap logo"></span>HOTSWAP</a>
-<div class="links">
-<a class="hide-sm" href="index.html#features">Features</a>
-<a href="support.html">Support</a>
-<a href="privacy.html">Privacy</a>
-<a class="hide-sm" href="privacy-choices.html">Privacy Choices</a>
-</div></nav></div></div>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HotSwap — Privacykeuzes</title>
+<meta name="description" content="Privacykeuzes en verzoeken tot verwijdering van gegevens voor HotSwap.">
+<meta name="theme-color" content="#07090a">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<main class="legal"><div class="wrap">
-<header class="legal-header"><div class="section-label">HOTSWAP</div><h1>Privacy Choices & Data Deletion</h1>
-<p class="lead">How to control permissions and request deletion of information associated with HotSwap.</p></header>
-<article class="legalbox">
-<div class="notice">You do not need to create a separate HotSwap account to use the app.</div>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo-mark.png" alt=""> HOTSWAP</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#screenshots">Screenshots</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
 
-<h2>Notification permission</h2>
-<p>You can enable or disable HotSwap notifications at any time in <strong>iOS Settings → Notifications → HotSwap</strong>.</p>
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">HOTSWAP</span>
+    <h1>Privacykeuzes &amp; verwijdering van gegevens</h1>
+    <p>Hoe je toestemmingen beheert en verwijdering van informatie bij HotSwap aanvraagt.</p>
+  </div>
+</header>
 
-<h2>Camera permission</h2>
-<p>You can enable or disable camera access at any time in <strong>iOS Settings → Privacy & Security → Camera</strong>. Camera access is only needed for scanning Shared Session QR codes.</p>
+<div class="doc">
 
-<h2>Shared Sessions</h2>
-<p>Where available in the app, you can leave a Shared Session. Hosts can end their Shared Sessions. Ending or leaving a session stops HotSwap from continuing to use that session as an active session on the device.</p>
+  <p>Je hebt geen apart HotSwap-account nodig om de app te gebruiken.</p>
 
-<h2>Request deletion</h2>
-<p>To request deletion of personal information associated with your use of HotSwap, send an email to:</p>
-<p><a class="contact" href="mailto:support.hotswap@gmail.com?subject=HotSwap%20Data%20Deletion%20Request">support.hotswap@gmail.com</a></p>
-<p>Use the subject <strong>HotSwap Data Deletion Request</strong> and briefly describe what you want deleted. We may need enough information to identify the relevant Shared Session information or support correspondence. Do not send your Apple ID password or other account passwords.</p>
+  <h2>Toestemming voor meldingen</h2>
+  <p>Je kunt HotSwap-meldingen op elk moment in- of uitschakelen via <strong>iOS-instellingen → Meldingen → HotSwap</strong>.</p>
 
-<h2>Other privacy requests</h2>
-<p>You can also use the same email address to ask a privacy question, withdraw consent where applicable, or request information about HotSwap's handling of your data.</p>
+  <h2>Toestemming voor camera</h2>
+  <p>Je kunt cameratoegang op elk moment in- of uitschakelen via <strong>iOS-instellingen → Privacy en beveiliging → Camera</strong>. Cameratoegang is alleen nodig om QR-codes van Shared Sessions te scannen.</p>
 
-<h2>Privacy Policy</h2>
-<p>For full details, read the <a href="privacy.html">HotSwap Privacy Policy</a>.</p>
-</article></div></main>
-<footer><div class="wrap foot">
-<div>© 2026 HotSwap. All rights reserved.</div>
-<div class="footlinks">
-<a href="support.html">Support</a>
-<a href="privacy.html">Privacy Policy</a>
-<a href="privacy-choices.html">Privacy Choices</a>
-<a href="mailto:support.hotswap@gmail.com">support.hotswap@gmail.com</a>
-</div></div></footer>
-<script src="site.js"></script></body></html>
+  <h2>Shared Sessions</h2>
+  <p>Waar beschikbaar in de app kun je een Shared Session verlaten. Hosts kunnen hun Shared Sessions beëindigen. Het beëindigen of verlaten van een sessie zorgt ervoor dat HotSwap die sessie niet langer als actieve sessie op het toestel gebruikt.</p>
+
+  <h2>Verwijdering aanvragen</h2>
+  <p>Om verwijdering aan te vragen van persoonsgegevens gekoppeld aan je gebruik van HotSwap, stuur een e-mail naar:</p>
+
+  <div class="contact-box">
+    <div>
+      <div class="label">Onderwerp: HotSwap Data Deletion Request</div>
+      <div class="value">support.hotswap@gmail.com</div>
+    </div>
+    <a class="btn btn-primary" href="mailto:support.hotswap@gmail.com?subject=HotSwap%20Data%20Deletion%20Request">Verzoek versturen</a>
+  </div>
+
+  <p>Gebruik als onderwerp <strong>HotSwap Data Deletion Request</strong> en omschrijf kort wat je verwijderd wilt hebben. Mogelijk hebben we genoeg informatie nodig om de relevante Shared Session-informatie of supportcorrespondentie te achterhalen. Stuur nooit je Apple ID-wachtwoord of andere accountwachtwoorden mee.</p>
+
+  <h2>Andere privacyverzoeken</h2>
+  <p>Je kunt hetzelfde e-mailadres ook gebruiken om een privacyvraag te stellen, toestemming in te trekken waar van toepassing, of informatie op te vragen over hoe HotSwap met je gegevens omgaat.</p>
+
+  <h2>Privacybeleid</h2>
+  <p>Voor alle details, lees het volledige <a href="privacy.html">Privacybeleid van HotSwap</a>.</p>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="copyright">© 2026 HotSwap. Alle rechten voorbehouden.</div>
+    <div class="foot-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacybeleid</a>
+      <a href="privacy-choices.html">Privacykeuzes</a>
+      <a href="mailto:support.hotswap@gmail.com">support.hotswap@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

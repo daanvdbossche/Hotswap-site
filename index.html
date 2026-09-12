@@ -1,109 +1,212 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#060807">
-<meta name="description" content="HotSwap — battery runtime tracking for production crews. Shared Sessions, Live Activities and Apple Watch support.">
-<title>HotSwap — Battery runtime tracking for production crews</title>
-<link rel="stylesheet" href="styles.css"><script src="config.js"></script>
-<link rel="icon" type="image/png" href="hotswap-logo.png">
-</head><body>
-<div class="navbar"><div class="wrap"><nav>
-<a class="brand" href="index.html"><span class="mark"><img src="hotswap-logo.png" alt="HotSwap logo"></span>HOTSWAP</a>
-<div class="links">
-<a class="hide-sm" href="index.html#features">Features</a>
-<a href="support.html">Support</a>
-<a href="privacy.html">Privacy</a>
-<a class="hide-sm" href="privacy-choices.html">Privacy Choices</a>
-</div></nav></div></div>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HotSwap — Batterij- en timerbeheer voor grip &amp; camera crews</title>
+<meta name="description" content="HotSwap houdt batterijruntimes en countdown-timers van je grip- en camera-materiaal bij, deelt live status met de crew en toont deadlines op lockscreen en Dynamic Island.">
+<meta name="theme-color" content="#07090a">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<main>
-<div class="wrap hero">
-  <div>
-    <span class="tag">Built for production crews</span>
-    <h1>Know when to <span class="accent">HotSwap.</span></h1>
-    <p class="lead">Battery runtime tracking for camera, grip and broadcast crews. Build gear setups, run independent Power Groups and keep the crew in sync with Shared Sessions, Live Activities and Apple Watch.</p>
-    <div class="actions"><a class="btn primary" href="#" data-appstore>Download on the App Store</a>
-    <a class="btn secondary" href="#features">Explore features</a></div>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo-mark.png" alt=""> HOTSWAP</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#screenshots">Screenshots</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
   </div>
-  <div class="hero-visual">
-  <div class="device-shot tall">
-    <img src="live-expanded.png" alt="HotSwap live view screenshot">
-  </div>
-  <div class="device-shot small">
-    <img src="lockscreen-liveactivity.png" alt="HotSwap live activity screenshot">
-  </div>
-</div>
-</div></div>
-</div>
+</nav>
 
-<section id="features" class="features"><div class="wrap">
-<div class="section-label">Designed for set life</div>
-<h2 class="title">Power and timer tracking without the clutter.</h2>
-<p class="copy">HotSwap keeps the essentials visible while the crew is working.</p>
-<div class="grid">
-<div class="card"><h3>Power Groups</h3><p>Track independent battery systems inside the same gear setup, each with its own runtime and battery configuration.</p></div>
-<div class="card"><h3>Shared Sessions</h3><p>Share live timer state with your crew. Viewer and Editor roles keep control clear.</p></div>
-<div class="card"><h3>Live Activities</h3><p>Keep battery deadlines visible on the Lock Screen and Dynamic Island while you work.</p></div>
-<div class="card"><h3>Apple Watch</h3><p>Monitor and control timers from your wrist without constantly reaching for your iPhone.</p></div>
-<div class="card"><h3>Own + shared timers</h3><p>Run private timers alongside a Shared Session without mixing the two.</p></div>
-<div class="card"><h3>Runtime adjustments</h3><p>Adapt estimated battery runtime to the real equipment combination and operating conditions.</p></div>
-</div>
-</div></section>
-<section class="screens"><div class="wrap">
-<div class="section-label">Real app screenshots</div>
-<h2 class="title">See HotSwap in action.</h2>
-<p class="copy">Real screenshots from HotSwap showing live battery tracking, Shared Sessions, setup building, history and lock-screen visibility.</p>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Gebouwd voor grip &amp; camera crews</span>
+      <h1>Weet altijd wanneer je moet swappen.</h1>
+      <p class="lead">HotSwap volgt de runtime van elke batterij op je set — van remote heads tot cable cams — en houdt de hele crew synchroon met Shared Sessions, Live Activities en Apple Watch.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#">Download in de App Store</a>
+        <a class="btn btn-ghost" href="#features">Bekijk de features</a>
+      </div>
+    </div>
+    <div class="hero-shots">
+      <div class="phone phone--back"><img src="img/lockscreen-liveactivity.png" alt="HotSwap Live Activity op het lockscreen"></div>
+      <div class="phone phone--front"><img src="img/live-view.png" alt="HotSwap live overzicht met Agito Head en Core batterijen"></div>
+    </div>
+  </div>
+</header>
 
-<div class="shot-grid">
-  <div class="shot-card">
-    <img src="live-expanded.png" alt="Live production shared session">
-    <h3>Live overview</h3>
-    <p>Track multiple Power Groups and timers in one shared production view.</p>
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Gemaakt voor de set</span>
+      <h2>Alle stroom en timers, zonder ruis.</h2>
+      <p>HotSwap houdt alleen zichtbaar wat er op dat moment toe doet, terwijl de crew aan het werk is.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">⎓</div>
+        <h3>Power Groups</h3>
+        <p>Volg onafhankelijke batterijsystemen binnen dezelfde setup, elk met eigen runtime en batterijconfiguratie — Head en Core apart, bijvoorbeeld.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⟲</div>
+        <h3>Shared Sessions</h3>
+        <p>Deel de live timerstatus met je crew via code, link of QR. Viewers kijken mee, Editors mogen timers bedienen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">◔</div>
+        <h3>Live Activities</h3>
+        <p>De eerstvolgende batterij-deadline blijft zichtbaar op het lockscreen en in de Dynamic Island, ook terwijl je iets anders doet op je telefoon.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⌚</div>
+        <h3>Apple Watch</h3>
+        <p>Bekijk en bedien timers vanaf je pols, zonder steeds naar je iPhone te moeten grijpen tussen setups door.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">▤</div>
+        <h3>Eigen + gedeelde timers</h3>
+        <p>Draai persoonlijke timers naast een Shared Session, zonder dat de twee door elkaar lopen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">≡</div>
+        <h3>Materiaalbibliotheek</h3>
+        <p>Organiseer cable cams, dolly's, rails en andere categorieën, zodat elke setup binnen enkele tikken klaarstaat.</p>
+      </div>
+    </div>
   </div>
-  <div class="shot-card">
-    <img src="live-collapsed-own-timers.png" alt="Own timers and shared timers">
-    <h3>Own + shared timers</h3>
-    <p>Keep personal timers separate while still following the live crew session.</p>
+</section>
+
+<section id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Echte schermen uit de app</span>
+      <h2>Zo ziet HotSwap eruit op set.</h2>
+      <p>Screenshots uit de app: live batterijtracking, Shared Sessions, setup builder, geschiedenis en zichtbaarheid op het lockscreen.</p>
+    </div>
+
+    <div class="showcase-row">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/live-view.png" alt="Live overzicht met meerdere Power Groups en timers"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">01</div>
+        <h3>Live overzicht</h3>
+        <p>Volg meerdere Power Groups en timers in één gedeeld productieoverzicht — per apparaat, per batterij, in real time.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row reverse">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/own-timers.png" alt="Eigen timers naast een gedeelde sessie"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">02</div>
+        <h3>Eigen + gedeelde timers</h3>
+        <p>Houd je persoonlijke timers apart terwijl je toch de live crew-sessie blijft volgen — inclusief recente setups binnen handbereik.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/setup-speedcam.png" alt="Setup builder voor een Speedcam met Shotover head"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">03</div>
+        <h3>Setups bouwen</h3>
+        <p>Stel gedetailleerde Power Group-setups samen met apparatuur, batterijen en optionele runtime-aanpassingen — van head tot camera tot voeding.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row reverse">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/shared-session-qr.png" alt="Een Shared Session delen via QR-code"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">04</div>
+        <h3>Deel met je crew</h3>
+        <p>Start een Shared Session en nodig crewleden uit via code, link of QR. Jij bepaalt wie kan meekijken en wie mag bedienen.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/lockscreen-liveactivity.png" alt="Live Activity op het lockscreen"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">05</div>
+        <h3>Live Activities</h3>
+        <p>Zie de eerstvolgende batterij-deadline meteen op het lockscreen, zonder de app te hoeven openen.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row reverse">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/dynamic-island.png" alt="HotSwap timer in de Dynamic Island"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">06</div>
+        <h3>Dynamic Island</h3>
+        <p>Houd de actieve timer zichtbaar terwijl je je iPhone gebruikt voor iets anders — nooit een swap-moment missen.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/materials.png" alt="Materiaalbibliotheek met categorieën"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">07</div>
+        <h3>Materiaalbibliotheek</h3>
+        <p>Organiseer gripcategorieën als cable cams, dolly's en rails, zodat je setups snel herbruikbaar blijven.</p>
+      </div>
+    </div>
+
+    <div class="showcase-row reverse">
+      <div class="showcase-shot">
+        <div class="phone"><img src="img/history.png" alt="Geschiedenis van runtime per dag"></div>
+      </div>
+      <div class="showcase-copy">
+        <div class="index">08</div>
+        <h3>Geschiedenis</h3>
+        <p>Bekijk runtime-geschiedenis en gebruiksstatistieken per materiaal, per dag, week, maand of all-time.</p>
+      </div>
+    </div>
   </div>
-  <div class="shot-card">
-    <img src="setup-speedcam.png" alt="Setup builder">
-    <h3>Build setups</h3>
-    <p>Create detailed Power Group setups with gear, batteries and runtime adjustments.</p>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Klaar om nooit meer een lege batterij te verrassen?</h2>
+      <p>HotSwap is gratis te downloaden voor iPhone en Apple Watch.</p>
+      <a class="btn btn-primary" href="#">Download in de App Store</a>
+    </div>
   </div>
-  <div class="shot-card">
-    <img src="shared-session-qr.png" alt="Shared Session QR">
-    <h3>Share with your crew</h3>
-    <p>Create a Shared Session and invite crew members using a code, link or QR.</p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="copyright">© 2026 HotSwap. Alle rechten voorbehouden.</div>
+    <div class="foot-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacybeleid</a>
+      <a href="privacy-choices.html">Privacykeuzes</a>
+      <a href="mailto:support.hotswap@gmail.com">support.hotswap@gmail.com</a>
+    </div>
   </div>
-  <div class="shot-card">
-    <img src="lockscreen-liveactivity.png" alt="Lock screen live activity">
-    <h3>Live Activities</h3>
-    <p>See the next battery deadline directly from the Lock Screen.</p>
-  </div>
-  <div class="shot-card">
-    <img src="dynamic-island-home.png" alt="Dynamic Island">
-    <h3>Dynamic Island</h3>
-    <p>Keep the next active timer visible while using your iPhone.</p>
-  </div>
-  <div class="shot-card">
-    <img src="materials.png" alt="Materials overview">
-    <h3>Materials library</h3>
-    <p>Organise gear categories and keep your setups ready for fast reuse.</p>
-  </div>
-  <div class="shot-card">
-    <img src="history.png" alt="Runtime history">
-    <h3>History</h3>
-    <p>Review runtime history and usage statistics for your material.</p>
-  </div>
-</div>
-</div></section>
-</main>
-<footer><div class="wrap foot">
-<div>© 2026 HotSwap. All rights reserved.</div>
-<div class="footlinks">
-<a href="support.html">Support</a>
-<a href="privacy.html">Privacy Policy</a>
-<a href="privacy-choices.html">Privacy Choices</a>
-<a href="mailto:support.hotswap@gmail.com">support.hotswap@gmail.com</a>
-</div></div></footer>
-<script src="site.js"></script></body></html>
+</footer>
+
+</body>
+</html>
