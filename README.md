@@ -1,32 +1,32 @@
 # HotSwap — website
 
-Statische website voor HotSwap: homepage met features/screenshots, plus de Support-, Privacy- en Privacykeuzes-pagina's die Apple verplicht stelt bij het indienen van een app.
+A static website for HotSwap: a homepage with features/screenshots, plus the Support, Privacy and Privacy Choices pages Apple requires when submitting an app.
 
-## Hosten op GitHub Pages
+## Hosting on GitHub Pages
 
-1. Maak een nieuwe repository op GitHub, bv. `hotswap-site`.
-2. Upload alle bestanden uit deze map (`index.html`, `support.html`, `privacy.html`, `privacy-choices.html`, `styles.css`, de map `img/`) naar de root van die repository.
-3. Ga naar **Settings → Pages** in de repository.
-4. Kies bij **Source**: `Deploy from a branch`, branch `main`, map `/ (root)`. Sla op.
-5. Na 1–2 minuten is de site live op `https://<jouw-gebruikersnaam>.github.io/hotswap-site/`.
+1. Create a new GitHub repository, e.g. `hotswap-site`.
+2. Upload **every** file and folder from this package — `index.html`, `support.html`, `privacy.html`, `privacy-choices.html`, `styles.css`, and the whole `img/` folder — to the root of that repository. The `img/` folder must come along, or the logo and screenshots will show as broken images.
+3. Go to **Settings → Pages** in the repository.
+4. Under **Source**, choose `Deploy from a branch`, branch `main`, folder `/ (root)`. Save.
+5. After 1–2 minutes the site is live at `https://<your-username>.github.io/hotswap-site/`.
 
-## Voor de App Store
+## For the App Store
 
-Gebruik in App Store Connect:
+Use in App Store Connect:
 
-- **Marketing URL**: de homepage (`index.html`)
+- **Marketing URL**: the homepage (`index.html`)
 - **Support URL**: `support.html`
 - **Privacy Policy URL**: `privacy.html`
 
-De pagina `privacy-choices.html` staat gelinkt vanaf de privacypagina en beschrijft hoe gebruikers toestemmingen beheren en verwijdering van gegevens aanvragen — handig als je in de App Privacy-vragenlijst "data deletion" moet onderbouwen.
+`privacy-choices.html` is linked from the privacy page and describes how users manage permissions and request data deletion — useful if the App Privacy questionnaire asks you to back up a "data deletion" answer.
 
-## Aan te passen voor je situatie
+## Things to adjust for your situation
 
-- `support.hotswap@gmail.com` → vervang overal door je eigen supportadres, of laat staan als dat al je adres is.
-- De "Download in de App Store"-knoppen (`href="#"`) → vul in zodra je App Store-link er is.
-- Teksten in `privacy.html` beschrijven wat de app nu doet (Shared Sessions via CloudKit, camera enkel voor QR-scan, meldingen, Apple Watch-sync). Pas aan zodra de functionaliteit wijzigt.
-- Logo: `img/logo-mark.png` en `img/favicon.png` zijn gegenereerd; vervang gerust door je eigen app-icoon.
+- `support.hotswap@gmail.com` → replace everywhere with your own support address, or leave it if that's already yours.
+- The "Download on the App Store" buttons (`href="#"`) → fill in once you have your App Store link.
+- The text in `privacy.html` describes what the app does today (Shared Sessions via CloudKit, camera only for QR scanning, notifications, Apple Watch sync). Update it if the functionality changes.
+- Logo: `img/logo-mark.png` and `img/favicon.png` use your uploaded transparent logo — swap in a new version if you update the app icon.
 
 ## Screenshots
 
-Alle schermafbeeldingen in `img/` komen uit de simulator-screenshots van de app zelf (History, Live view, Setup builder, Materiaal, Shared Session QR, Dynamic Island, lockscreen widgets).
+All screenshots in `img/` come from the app's own simulator screenshots (History, Live view, Setup builder, Materials, Shared Session QR, Dynamic Island, lock-screen widgets).
