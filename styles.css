@@ -626,7 +626,7 @@ footer .copyright { color: var(--text-faint); font-size: 14px; }
   margin: 4px auto 14px;
 }
 
-.timer-ring-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.timer-ring-wrap > svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 
 .timer-ring-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 11; }
 .timer-ring-progress {
@@ -719,4 +719,77 @@ footer .copyright { color: var(--text-faint); font-size: 14px; }
   max-width: 380px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ---------- Multi-card timer demo (Head / Core) ---------- */
+
+.timer-ring-center svg {
+  width: 40px;
+  height: 40px;
+  transform: none;
+}
+
+.timer-demo-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.timer-demo-group .timer-demo-card { max-width: none; width: 100%; }
+
+.pg-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.pg-label svg { width: 12px; height: 12px; }
+
+.timer-demo-allrow {
+  display: flex;
+  gap: 10px;
+  max-width: 680px;
+  margin: 18px auto 0;
+}
+
+.all-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 13.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.all-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+.all-btn:active { transform: scale(0.96); }
+
+.all-btn--pause { background: rgba(255, 255, 255, 0.08); color: var(--text); }
+.all-btn--pause:hover { background: rgba(255, 255, 255, 0.14); }
+
+.all-btn--restart { background: rgba(33, 230, 193, 0.12); color: var(--teal); }
+.all-btn--restart:hover { background: rgba(33, 230, 193, 0.2); }
+
+.all-btn--stop { background: rgba(255, 90, 90, 0.12); color: #ff5a5a; }
+.all-btn--stop:hover { background: rgba(255, 90, 90, 0.2); }
+
+@media (max-width: 640px) {
+  .timer-demo-group { grid-template-columns: 1fr; max-width: 340px; }
+  .timer-demo-allrow { max-width: 340px; flex-wrap: wrap; }
+  .all-btn { min-width: 45%; }
 }

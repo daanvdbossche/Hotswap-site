@@ -127,46 +127,116 @@
     </div>
 
     <div class="demo-wrap" style="margin-top: 56px;">
-      <div class="timer-demo-card" id="demoCard">
-        <div class="timer-demo-head">
-          <div class="who">
-            <span class="name">Fietsbatterij</span>
-            <span class="cat">Head · Shotover</span>
+      <div class="timer-demo-group">
+
+        <div>
+          <div class="pg-label">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+            Head
           </div>
-          <div class="timer-demo-badge" id="demoBadge">ACTIVE</div>
-        </div>
+          <div class="timer-demo-card" data-duration="150">
+            <div class="timer-demo-head">
+              <div class="who">
+                <span class="name">V-Lock Battery</span>
+                <span class="cat">Head · Shotover</span>
+              </div>
+              <div class="timer-demo-badge js-badge">ACTIVE</div>
+            </div>
 
-        <div class="timer-ring-wrap">
-          <svg viewBox="0 0 148 148">
-            <circle class="timer-ring-bg" cx="74" cy="74" r="60"></circle>
-            <circle class="timer-ring-progress" id="demoRing" cx="74" cy="74" r="60"></circle>
-          </svg>
-          <div class="timer-ring-center" id="demoIconWrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1.5" y="7" width="18" height="10" rx="2.5"/>
-              <path d="M21.5 10v4"/>
-              <rect id="demoBatteryFill" x="4" y="9.3" width="12" height="5.4" rx="1" fill="currentColor" stroke="none"/>
-            </svg>
+            <div class="timer-ring-wrap">
+              <svg viewBox="0 0 148 148">
+                <circle class="timer-ring-bg" cx="74" cy="74" r="60"></circle>
+                <circle class="timer-ring-progress js-ring" cx="74" cy="74" r="60"></circle>
+              </svg>
+              <div class="timer-ring-center js-icon-wrap">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1.5" y="7" width="18" height="10" rx="2.5"/>
+                  <path d="M21.5 10v4"/>
+                  <rect class="js-batt-fill" x="4" y="9.3" width="13" height="5.4" rx="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="timer-demo-time js-time">02:30</div>
+            <div class="timer-demo-status js-status">Counting down…</div>
+
+            <div class="timer-demo-buttons">
+              <button class="timer-btn timer-btn--pause js-pause" aria-label="Pause or resume">
+                <svg class="js-pause-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              </button>
+              <button class="timer-btn timer-btn--restart js-restart" aria-label="Restart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 2.6 6.4"/><path d="M3 21v-6h6"/></svg>
+              </button>
+              <button class="timer-btn timer-btn--stop js-stop" aria-label="Stop">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="timer-demo-time" id="demoTime">02:00</div>
-        <div class="timer-demo-status" id="demoStatus">Counting down…</div>
+        <div>
+          <div class="pg-label">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+            Core
+          </div>
+          <div class="timer-demo-card" data-duration="110">
+            <div class="timer-demo-head">
+              <div class="who">
+                <span class="name">V-Lock Battery</span>
+                <span class="cat">Core · GV Compact</span>
+              </div>
+              <div class="timer-demo-badge js-badge">ACTIVE</div>
+            </div>
 
-        <div class="timer-demo-buttons">
-          <button class="timer-btn timer-btn--pause" id="demoPauseBtn" aria-label="Pause or resume">
-            <svg id="demoPauseIcon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
-          </button>
-          <button class="timer-btn timer-btn--restart" id="demoRestartBtn" aria-label="Restart">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 2.6 6.4"/><path d="M3 21v-6h6"/></svg>
-          </button>
-          <button class="timer-btn timer-btn--stop" id="demoStopBtn" aria-label="Stop">
-            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
-          </button>
+            <div class="timer-ring-wrap">
+              <svg viewBox="0 0 148 148">
+                <circle class="timer-ring-bg" cx="74" cy="74" r="60"></circle>
+                <circle class="timer-ring-progress js-ring" cx="74" cy="74" r="60"></circle>
+              </svg>
+              <div class="timer-ring-center js-icon-wrap">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1.5" y="7" width="18" height="10" rx="2.5"/>
+                  <path d="M21.5 10v4"/>
+                  <rect class="js-batt-fill" x="4" y="9.3" width="13" height="5.4" rx="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="timer-demo-time js-time">01:50</div>
+            <div class="timer-demo-status js-status">Counting down…</div>
+
+            <div class="timer-demo-buttons">
+              <button class="timer-btn timer-btn--pause js-pause" aria-label="Pause or resume">
+                <svg class="js-pause-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              </button>
+              <button class="timer-btn timer-btn--restart js-restart" aria-label="Restart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 2.6 6.4"/><path d="M3 21v-6h6"/></svg>
+              </button>
+              <button class="timer-btn timer-btn--stop js-stop" aria-label="Stop">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+              </button>
+            </div>
+          </div>
         </div>
+
+      </div>
+
+      <div class="timer-demo-allrow">
+        <button class="all-btn all-btn--pause" id="allPauseBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          Pause all
+        </button>
+        <button class="all-btn all-btn--restart" id="allRestartBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 2.6 6.4"/><path d="M3 21v-6h6"/></svg>
+          Restart all
+        </button>
+        <button class="all-btn all-btn--stop" id="allStopBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+          Stop all
+        </button>
       </div>
     </div>
-    <p class="demo-caption">A live preview inspired by HotSwap's real timer — press pause, restart or stop. Colours shift from teal to orange to red as a battery runs low, just like in the app.</p>
+    <p class="demo-caption">A live preview inspired by HotSwap's real Power Groups — Head and Core run their own timers, just like on set. Press pause, restart or stop on either one, or control both at once below. Colours shift from teal to orange to red as a battery runs low, exactly like in the app.</p>
   </div>
 </section>
 
@@ -175,7 +245,7 @@
     <div class="section-head">
       <span class="eyebrow">Real screens from the app</span>
       <h2>This is what HotSwap looks like on set.</h2>
-      <p>Screenshots from the app: live battery tracking, Shared Sessions, the setup builder, history and lock-screen visibility.</p>
+      <p>Screenshots from the app: live battery tracking, Shared Sessions, the setup builder and lock-screen visibility.</p>
     </div>
 
     <div class="showcase-row">
@@ -191,78 +261,45 @@
 
     <div class="showcase-row reverse">
       <div class="showcase-shot">
-        <div class="phone"><img src="img/own-timers.png" alt="Own timers alongside a shared session"></div>
-      </div>
-      <div class="showcase-copy">
-        <div class="index">02</div>
-        <h3>Own + shared timers</h3>
-        <p>Keep your personal timers separate while still following the live crew session — with recent setups within reach.</p>
-      </div>
-    </div>
-
-    <div class="showcase-row">
-      <div class="showcase-shot">
         <div class="phone"><img src="img/setup-speedcam.png" alt="Setup builder for a Speedcam with a Shotover head"></div>
       </div>
       <div class="showcase-copy">
-        <div class="index">03</div>
+        <div class="index">02</div>
         <h3>Build setups</h3>
         <p>Put together detailed Power Group setups with gear, batteries and optional runtime adjustments — from head to camera to power source.</p>
       </div>
     </div>
 
-    <div class="showcase-row reverse">
+    <div class="showcase-row">
       <div class="showcase-shot">
         <div class="phone"><img src="img/shared-session-qr.png" alt="Sharing a Shared Session via QR code"></div>
       </div>
       <div class="showcase-copy">
-        <div class="index">04</div>
+        <div class="index">03</div>
         <h3>Share with your crew</h3>
         <p>Start a Shared Session and invite crew members via code, link or QR. You decide who can watch and who can control it.</p>
       </div>
     </div>
 
-    <div class="showcase-row">
+    <div class="showcase-row reverse">
       <div class="showcase-shot">
         <div class="phone"><img src="img/lockscreen-liveactivity.png" alt="Live Activity on the lock screen"></div>
       </div>
       <div class="showcase-copy">
-        <div class="index">05</div>
+        <div class="index">04</div>
         <h3>Live Activities</h3>
         <p>See the next battery deadline right on the Lock Screen, without opening the app.</p>
       </div>
     </div>
 
-    <div class="showcase-row reverse">
+    <div class="showcase-row">
       <div class="showcase-shot">
         <div class="phone"><img src="img/dynamic-island.png" alt="HotSwap timer in the Dynamic Island"></div>
       </div>
       <div class="showcase-copy">
-        <div class="index">06</div>
+        <div class="index">05</div>
         <h3>Dynamic Island</h3>
         <p>Keep the active timer visible while using your iPhone for something else — never miss a swap moment.</p>
-      </div>
-    </div>
-
-    <div class="showcase-row">
-      <div class="showcase-shot">
-        <div class="phone"><img src="img/materials.png" alt="Materials library with categories"></div>
-      </div>
-      <div class="showcase-copy">
-        <div class="index">07</div>
-        <h3>Materials library</h3>
-        <p>Organise grip categories like cable cams, dollies and rails, so your setups stay ready for fast reuse.</p>
-      </div>
-    </div>
-
-    <div class="showcase-row reverse">
-      <div class="showcase-shot">
-        <div class="phone"><img src="img/history.png" alt="Runtime history per day"></div>
-      </div>
-      <div class="showcase-copy">
-        <div class="index">08</div>
-        <h3>History</h3>
-        <p>Review runtime history and usage statistics per piece of material, by day, week, month or all-time.</p>
       </div>
     </div>
   </div>
@@ -329,37 +366,15 @@
 
 <script>
 (function () {
-  var DURATION = 120; // demo runtime in seconds (2:00)
   var R = 60;
   var CIRC = 2 * Math.PI * R;
-
-  var ring = document.getElementById('demoRing');
-  var timeEl = document.getElementById('demoTime');
-  var statusEl = document.getElementById('demoStatus');
-  var badgeEl = document.getElementById('demoBadge');
-  var iconWrap = document.getElementById('demoIconWrap');
-  var battFill = document.getElementById('demoBatteryFill');
-  var pauseBtn = document.getElementById('demoPauseBtn');
-  var pauseIcon = document.getElementById('demoPauseIcon');
-  var restartBtn = document.getElementById('demoRestartBtn');
-  var stopBtn = document.getElementById('demoStopBtn');
-
-  if (!ring) return;
-
-  ring.style.strokeDasharray = CIRC;
-
-  var remaining = DURATION;
-  var paused = false;
-  var stopped = false;
-  var intervalId = null;
-
   var PAUSE_PATH = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
   var PLAY_PATH = '<path d="M7 5.5v13l11-6.5z"/>';
 
-  function colorFor() {
+  function colorFor(remaining, duration, paused, stopped) {
     if (stopped) return '#ff5a5a';
     if (paused) return '#f5a623';
-    var pct = remaining / DURATION;
+    var pct = remaining / duration;
     if (pct <= 0.15) return '#ff5a5a';
     if (pct <= 0.30) return '#f5a623';
     return '#21e6c1';
@@ -383,70 +398,147 @@
     return h > 0 ? (h + ':' + mm + ':' + ss) : (mm + ':' + ss);
   }
 
-  function render() {
-    var pct = Math.max(0, remaining / DURATION);
-    var color = colorFor();
+  function initTimerCard(card) {
+    var DURATION = parseInt(card.dataset.duration, 10) || 120;
+    var ring = card.querySelector('.js-ring');
+    var timeEl = card.querySelector('.js-time');
+    var statusEl = card.querySelector('.js-status');
+    var badgeEl = card.querySelector('.js-badge');
+    var iconWrap = card.querySelector('.js-icon-wrap');
+    var battFill = card.querySelector('.js-batt-fill');
+    var pauseBtn = card.querySelector('.js-pause');
+    var pauseIcon = card.querySelector('.js-pause-icon');
+    var restartBtn = card.querySelector('.js-restart');
+    var stopBtn = card.querySelector('.js-stop');
 
-    ring.style.strokeDashoffset = CIRC * (1 - pct);
-    ring.style.stroke = color;
-    timeEl.style.color = color;
-    iconWrap.style.color = color;
-    timeEl.textContent = format(remaining);
+    ring.style.strokeDasharray = CIRC;
 
-    var lvl = stopped ? 0 : batteryLevel(pct);
-    battFill.setAttribute('width', (13 * lvl).toFixed(1));
+    var remaining = DURATION;
+    var paused = false;
+    var stopped = false;
 
-    badgeEl.style.color = color;
-    badgeEl.style.background = color === '#21e6c1' ? 'rgba(33,230,193,0.12)' : (color === '#f5a623' ? 'rgba(245,166,35,0.14)' : 'rgba(255,90,90,0.14)');
+    function render() {
+      var pct = Math.max(0, remaining / DURATION);
+      var color = colorFor(remaining, DURATION, paused, stopped);
 
-    if (stopped) {
-      badgeEl.textContent = 'STOPPED';
-      statusEl.textContent = 'Timer stopped';
-    } else if (remaining <= 0) {
-      badgeEl.textContent = 'EXPIRED';
-      statusEl.textContent = 'Battery empty — swap now';
-    } else if (paused) {
-      badgeEl.textContent = 'PAUSED';
-      statusEl.textContent = 'Timer paused';
-    } else {
-      badgeEl.textContent = 'ACTIVE';
-      statusEl.textContent = 'Counting down…';
+      ring.style.strokeDashoffset = CIRC * (1 - pct);
+      ring.style.stroke = color;
+      timeEl.style.color = color;
+      iconWrap.style.color = color;
+      timeEl.textContent = format(remaining);
+
+      var lvl = stopped ? 0 : batteryLevel(pct);
+      battFill.setAttribute('width', (13 * lvl).toFixed(1));
+
+      badgeEl.style.color = color;
+      badgeEl.style.background = color === '#21e6c1' ? 'rgba(33,230,193,0.12)' : (color === '#f5a623' ? 'rgba(245,166,35,0.14)' : 'rgba(255,90,90,0.14)');
+
+      if (stopped) {
+        badgeEl.textContent = 'STOPPED';
+        statusEl.textContent = 'Timer stopped';
+      } else if (remaining <= 0) {
+        badgeEl.textContent = 'EXPIRED';
+        statusEl.textContent = 'Battery empty — swap now';
+      } else if (paused) {
+        badgeEl.textContent = 'PAUSED';
+        statusEl.textContent = 'Timer paused';
+      } else {
+        badgeEl.textContent = 'ACTIVE';
+        statusEl.textContent = 'Counting down…';
+      }
     }
-  }
 
-  function tick() {
-    if (!paused && !stopped && remaining > 0) {
-      remaining -= 1;
+    function doPause() {
+      if (stopped || remaining <= 0 || paused) return;
+      paused = true;
+      pauseIcon.innerHTML = PLAY_PATH;
       render();
     }
+    function doResume() {
+      if (stopped || remaining <= 0 || !paused) return;
+      paused = false;
+      pauseIcon.innerHTML = PAUSE_PATH;
+      render();
+    }
+    function doRestart() {
+      remaining = DURATION;
+      paused = false;
+      stopped = false;
+      pauseIcon.innerHTML = PAUSE_PATH;
+      restartBtn.classList.remove('pulse');
+      void restartBtn.offsetWidth;
+      restartBtn.classList.add('pulse');
+      render();
+    }
+    function doStop() {
+      stopped = true;
+      paused = true;
+      render();
+    }
+
+    pauseBtn.addEventListener('click', function () {
+      if (stopped || remaining <= 0) return;
+      if (paused) { doResume(); } else { doPause(); }
+    });
+    restartBtn.addEventListener('click', doRestart);
+    stopBtn.addEventListener('click', doStop);
+
+    render();
+
+    return {
+      tick: function () {
+        if (!paused && !stopped && remaining > 0) {
+          remaining -= 1;
+          render();
+        }
+      },
+      isRunning: function () { return !paused && !stopped && remaining > 0; },
+      pause: doPause,
+      resume: doResume,
+      restart: doRestart,
+      stop: doStop
+    };
   }
 
-  pauseBtn.addEventListener('click', function () {
-    if (stopped || remaining <= 0) return;
-    paused = !paused;
-    pauseIcon.innerHTML = paused ? PLAY_PATH : PAUSE_PATH;
-    render();
-  });
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.timer-demo-card'));
+  if (!cards.length) return;
 
-  restartBtn.addEventListener('click', function () {
-    remaining = DURATION;
-    paused = false;
-    stopped = false;
-    pauseIcon.innerHTML = PAUSE_PATH;
-    restartBtn.classList.remove('pulse');
-    void restartBtn.offsetWidth;
-    restartBtn.classList.add('pulse');
-    render();
-  });
+  var instances = cards.map(initTimerCard);
 
-  stopBtn.addEventListener('click', function () {
-    stopped = true;
-    paused = true;
-    render();
-  });
+  setInterval(function () {
+    instances.forEach(function (i) { i.tick(); });
+    syncAllPauseLabel();
+  }, 1000);
 
-  render();
-  intervalId = setInterval(tick, 1000);
+  var allPauseBtn = document.getElementById('allPauseBtn');
+  var allRestartBtn = document.getElementById('allRestartBtn');
+  var allStopBtn = document.getElementById('allStopBtn');
+
+  function syncAllPauseLabel() {
+    if (!allPauseBtn) return;
+    var anyRunning = instances.some(function (i) { return i.isRunning(); });
+    allPauseBtn.lastChild.textContent = anyRunning ? ' Pause all' : ' Resume all';
+  }
+
+  if (allPauseBtn) {
+    allPauseBtn.addEventListener('click', function () {
+      var anyRunning = instances.some(function (i) { return i.isRunning(); });
+      instances.forEach(function (i) { if (anyRunning) { i.pause(); } else { i.resume(); } });
+      syncAllPauseLabel();
+    });
+  }
+  if (allRestartBtn) {
+    allRestartBtn.addEventListener('click', function () {
+      instances.forEach(function (i) { i.restart(); });
+      syncAllPauseLabel();
+    });
+  }
+  if (allStopBtn) {
+    allStopBtn.addEventListener('click', function () {
+      instances.forEach(function (i) { i.stop(); });
+      syncAllPauseLabel();
+    });
+  }
 })();
 </script>
 
