@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HotSwap — Battery &amp; timer tracking for grip and camera crews</title>
-<meta name="description" content="HotSwap tracks battery runtime and countdown timers for your grip and camera gear, shares live status with the crew, and shows deadlines on the lock screen and Dynamic Island.">
+<meta name="description" content="HotSwap tracks battery runtime and countdown timers for your grip and camera gear, shares live status with the crew, and shows deadlines on the lock screen, Dynamic Island and Apple Watch.">
 <meta name="theme-color" content="#07090a">
 <link rel="icon" href="img/favicon.png">
 <link rel="stylesheet" href="styles.css">
@@ -23,6 +23,9 @@
       <a href="index.html#screenshots">Screenshots</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
+      <a class="nav-icon-link" href="https://www.instagram.com/hotswap.app?stkn=MXI0ZXZmc3gxMXU3dw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="HotSwap on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
+      </a>
     </div>
   </div>
 </nav>
@@ -55,32 +58,69 @@
 
     <div class="features-grid">
       <div class="feature">
-        <div class="feature-icon">⎓</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1.5" y="7" width="18" height="10" rx="2.5"/>
+            <path d="M21.5 10v4"/>
+            <path d="M11.9 9 9.2 13h2.2L10.3 16.3 14 11.4h-2.2L11.9 9z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
         <h3>Power Groups</h3>
         <p>Track independent battery systems inside the same setup, each with its own runtime and battery configuration — Head and Core kept apart, for example.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">⟲</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12"/>
+            <path d="M8 7l4-4 4 4"/>
+            <path d="M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>
+          </svg>
+        </div>
         <h3>Shared Sessions</h3>
         <p>Share live timer status with your crew via code, link or QR. Viewers watch along, Editors can control the timers.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">◔</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1.5" y="9" width="21" height="6" rx="3"/>
+            <circle cx="17.5" cy="12" r="1.3" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
         <h3>Live Activities</h3>
         <p>The next battery deadline stays visible on the Lock Screen and in the Dynamic Island, even while you're doing something else on your phone.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">⌚</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="12" height="16" rx="4"/>
+            <path d="M9 4.3l.6-1.8h4.8l.6 1.8"/>
+            <path d="M9 19.7l.6 1.8h4.8l.6-1.8"/>
+            <path d="M18.2 10v4" stroke-width="2.1"/>
+          </svg>
+        </div>
         <h3>Apple Watch</h3>
         <p>Check and control timers from your wrist, without having to reach for your iPhone between setups.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">▤</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="13" r="8"/>
+            <path d="M12 13V8.5"/>
+            <path d="M9.5 2h5"/>
+            <path d="M12 13l3 2"/>
+          </svg>
+        </div>
         <h3>Own + shared timers</h3>
         <p>Run personal timers alongside a Shared Session, without the two getting mixed up.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">≡</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l8 4.4v9.2L12 21l-8-4.4V7.4L12 3z"/>
+            <path d="M4.4 7.6 12 12l7.6-4.4"/>
+            <path d="M12 12v9"/>
+          </svg>
+        </div>
         <h3>Materials library</h3>
         <p>Organise cable cams, dollies, rails and other categories, so every setup is ready in a few taps.</p>
       </div>
@@ -186,12 +226,46 @@
   </div>
 </section>
 
+<section id="watch">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Right on your wrist</span>
+      <h2>Full control from Apple Watch.</h2>
+      <p>See the status of every battery at a glance from your watch face, and pause, restart or stop timers without touching your phone.</p>
+    </div>
+
+    <div class="watch-grid">
+      <div class="watch-card">
+        <div class="watch"><img src="img/watch-face.png" alt="HotSwap complication on an Apple Watch face"></div>
+        <h3>At a glance</h3>
+        <p>A HotSwap complication keeps the active timer right on your watch face.</p>
+      </div>
+      <div class="watch-card">
+        <div class="watch"><img src="img/watch-timer.png" alt="Controlling a HotSwap timer on Apple Watch"></div>
+        <h3>Control from your wrist</h3>
+        <p>Pause, restart or stop any battery timer directly from Apple Watch.</p>
+      </div>
+      <div class="watch-card">
+        <div class="watch"><img src="img/watch-live.png" alt="Live Power Group status on Apple Watch"></div>
+        <h3>Live status</h3>
+        <p>Check every Power Group in a setup without ever reaching for your iPhone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="cta-band">
       <h2>Ready to never get caught out by a dead battery again?</h2>
       <p>HotSwap is free to download for iPhone and Apple Watch.</p>
-      <a class="btn btn-primary" href="#">Download on the App Store</a>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#">Download on the App Store</a>
+        <a class="btn btn-instagram" href="https://www.instagram.com/hotswap.app?stkn=MXI0ZXZmc3gxMXU3dw%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
+          Follow on Instagram
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -204,6 +278,9 @@
       <a href="privacy.html">Privacy Policy</a>
       <a href="privacy-choices.html">Privacy Choices</a>
       <a href="mailto:support.hotswap@gmail.com">support.hotswap@gmail.com</a>
+      <a class="social-icon" href="https://www.instagram.com/hotswap.app?stkn=MXI0ZXZmc3gxMXU3dw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="HotSwap on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
+      </a>
     </div>
   </div>
 </footer>
