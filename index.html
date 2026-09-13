@@ -125,6 +125,48 @@
         <p>Organise cable cams, dollies, rails and other categories, so every setup is ready in a few taps.</p>
       </div>
     </div>
+
+    <div class="demo-wrap" style="margin-top: 56px;">
+      <div class="timer-demo-card" id="demoCard">
+        <div class="timer-demo-head">
+          <div class="who">
+            <span class="name">Fietsbatterij</span>
+            <span class="cat">Head · Shotover</span>
+          </div>
+          <div class="timer-demo-badge" id="demoBadge">ACTIVE</div>
+        </div>
+
+        <div class="timer-ring-wrap">
+          <svg viewBox="0 0 148 148">
+            <circle class="timer-ring-bg" cx="74" cy="74" r="60"></circle>
+            <circle class="timer-ring-progress" id="demoRing" cx="74" cy="74" r="60"></circle>
+          </svg>
+          <div class="timer-ring-center" id="demoIconWrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="7" width="18" height="10" rx="2.5"/>
+              <path d="M21.5 10v4"/>
+              <rect id="demoBatteryFill" x="4" y="9.3" width="12" height="5.4" rx="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timer-demo-time" id="demoTime">02:00</div>
+        <div class="timer-demo-status" id="demoStatus">Counting down…</div>
+
+        <div class="timer-demo-buttons">
+          <button class="timer-btn timer-btn--pause" id="demoPauseBtn" aria-label="Pause or resume">
+            <svg id="demoPauseIcon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          </button>
+          <button class="timer-btn timer-btn--restart" id="demoRestartBtn" aria-label="Restart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 2.6 6.4"/><path d="M3 21v-6h6"/></svg>
+          </button>
+          <button class="timer-btn timer-btn--stop" id="demoStopBtn" aria-label="Stop">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <p class="demo-caption">A live preview inspired by HotSwap's real timer — press pause, restart or stop. Colours shift from teal to orange to red as a battery runs low, just like in the app.</p>
   </div>
 </section>
 
@@ -284,6 +326,129 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var DURATION = 120; // demo runtime in seconds (2:00)
+  var R = 60;
+  var CIRC = 2 * Math.PI * R;
+
+  var ring = document.getElementById('demoRing');
+  var timeEl = document.getElementById('demoTime');
+  var statusEl = document.getElementById('demoStatus');
+  var badgeEl = document.getElementById('demoBadge');
+  var iconWrap = document.getElementById('demoIconWrap');
+  var battFill = document.getElementById('demoBatteryFill');
+  var pauseBtn = document.getElementById('demoPauseBtn');
+  var pauseIcon = document.getElementById('demoPauseIcon');
+  var restartBtn = document.getElementById('demoRestartBtn');
+  var stopBtn = document.getElementById('demoStopBtn');
+
+  if (!ring) return;
+
+  ring.style.strokeDasharray = CIRC;
+
+  var remaining = DURATION;
+  var paused = false;
+  var stopped = false;
+  var intervalId = null;
+
+  var PAUSE_PATH = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
+  var PLAY_PATH = '<path d="M7 5.5v13l11-6.5z"/>';
+
+  function colorFor() {
+    if (stopped) return '#ff5a5a';
+    if (paused) return '#f5a623';
+    var pct = remaining / DURATION;
+    if (pct <= 0.15) return '#ff5a5a';
+    if (pct <= 0.30) return '#f5a623';
+    return '#21e6c1';
+  }
+
+  function batteryLevel(pct) {
+    if (pct <= 0.05) return 0;
+    if (pct <= 0.35) return 0.25;
+    if (pct <= 0.65) return 0.5;
+    if (pct <= 0.85) return 0.75;
+    return 1;
+  }
+
+  function format(sec) {
+    sec = Math.max(0, sec);
+    var h = Math.floor(sec / 3600);
+    var m = Math.floor((sec % 3600) / 60);
+    var s = sec % 60;
+    var mm = (h > 0 ? String(m).padStart(2, '0') : String(m));
+    var ss = String(s).padStart(2, '0');
+    return h > 0 ? (h + ':' + mm + ':' + ss) : (mm + ':' + ss);
+  }
+
+  function render() {
+    var pct = Math.max(0, remaining / DURATION);
+    var color = colorFor();
+
+    ring.style.strokeDashoffset = CIRC * (1 - pct);
+    ring.style.stroke = color;
+    timeEl.style.color = color;
+    iconWrap.style.color = color;
+    timeEl.textContent = format(remaining);
+
+    var lvl = stopped ? 0 : batteryLevel(pct);
+    battFill.setAttribute('width', (13 * lvl).toFixed(1));
+
+    badgeEl.style.color = color;
+    badgeEl.style.background = color === '#21e6c1' ? 'rgba(33,230,193,0.12)' : (color === '#f5a623' ? 'rgba(245,166,35,0.14)' : 'rgba(255,90,90,0.14)');
+
+    if (stopped) {
+      badgeEl.textContent = 'STOPPED';
+      statusEl.textContent = 'Timer stopped';
+    } else if (remaining <= 0) {
+      badgeEl.textContent = 'EXPIRED';
+      statusEl.textContent = 'Battery empty — swap now';
+    } else if (paused) {
+      badgeEl.textContent = 'PAUSED';
+      statusEl.textContent = 'Timer paused';
+    } else {
+      badgeEl.textContent = 'ACTIVE';
+      statusEl.textContent = 'Counting down…';
+    }
+  }
+
+  function tick() {
+    if (!paused && !stopped && remaining > 0) {
+      remaining -= 1;
+      render();
+    }
+  }
+
+  pauseBtn.addEventListener('click', function () {
+    if (stopped || remaining <= 0) return;
+    paused = !paused;
+    pauseIcon.innerHTML = paused ? PLAY_PATH : PAUSE_PATH;
+    render();
+  });
+
+  restartBtn.addEventListener('click', function () {
+    remaining = DURATION;
+    paused = false;
+    stopped = false;
+    pauseIcon.innerHTML = PAUSE_PATH;
+    restartBtn.classList.remove('pulse');
+    void restartBtn.offsetWidth;
+    restartBtn.classList.add('pulse');
+    render();
+  });
+
+  stopBtn.addEventListener('click', function () {
+    stopped = true;
+    paused = true;
+    render();
+  });
+
+  render();
+  intervalId = setInterval(tick, 1000);
+})();
+</script>
 
 </body>
 </html>
